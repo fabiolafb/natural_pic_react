@@ -4,6 +4,7 @@
   width: 100%;
   margin: 5rem;
   position: relative;
+  
 }
 
 .grid-columns-5 {
@@ -15,6 +16,7 @@
 
 #contenedor_galeria {
   padding-top: 2rem;
+  margin-bottom: 3rem;
 }
 
 .foto {
@@ -52,12 +54,8 @@
   width: 14rem;
   position: absolute;
   padding-left: 1em;
-  
-  
-  /* margin-top: 8em;
-  margin-bottom: 1em;
-  margin-left: 1em;
-  margin-right: 1em */
+  padding-top: 8em;
+
 }
 
 
@@ -70,4 +68,56 @@
   width: 80%;
   gap: 4% 2%;
   margin: 0 auto 0 auto;
+}
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .grid-columns-5 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2% 3%;
+    text-align: center;
+    width: 70%;
+  }
+  .foto {
+    width: 80%;
+  }
+  .galeria .foto svg {
+    align-self: flex-end;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    margin-top: 0.6rem;
+    margin-right: 0;
+    margin-left: 3rem;
+    position: absolute;
+  }
+  .grid-columns-4 {
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    gap: 4% 2%;
+    margin: 0 auto 0 auto;
+  }
+}
+@media (max-width: 600px) {
+  .grid-columns-5 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1% 2%;
+    width: 50%;
+    text-align: center;
+  }
+  .galeria .foto svg {
+    align-self: flex-end;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    margin-top: 0.6rem;
+    margin-right: 1rem;
+    position: absolute;
+  }
+  .grid-columns-4 {
+    grid-template-columns: repeat(1, 1fr);
+    width: 50%;
+    gap: 4% 2%;
+    margin: 0 auto 0 auto;
+
+  }
+
 }

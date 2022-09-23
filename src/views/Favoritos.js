@@ -13,7 +13,7 @@ export default function Favoritos() {
   return (
     <div>
       <h1>Fotos favoritas</h1>
-      <h4> <i>Presiona sobre la imagen para eliminar de favoritas</i></h4>
+      <h4> Presiona sobre la imagen para eliminar de favoritas</h4>
       <div className="p-3 galeria grid-columns-4">
         {fotografias
           .filter((elem) => elem.favorito)
